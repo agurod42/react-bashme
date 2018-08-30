@@ -16,8 +16,7 @@ export default class extends React.Component<BashmeProps, any> {
 			Bashme.use(provider);
 		});
 
-		Bashme
-			.show(document.getElementById('bashme')!);
+		Bashme.show(document.getElementById('bashme')!);
 	}
 
 	public render() {

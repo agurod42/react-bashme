@@ -1,12 +1,12 @@
 {
   "name": "react-bashme",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "private": false,
   "author": "agurodriguez",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "bashme": "^0.1.1",
+    "bashme": "^0.1.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts-ts": "2.17.0"
@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
-    "@types/node": "^10.9.3",
+    "@types/node": "^10.9.4",
     "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
     "typescript": "^3.0.3"
