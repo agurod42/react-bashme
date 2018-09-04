@@ -1,2 +1,2 @@
 
-export * from 'bashme/dist/resume/providers';
+export * from 'bashme';

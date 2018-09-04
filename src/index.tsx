@@ -11,12 +11,20 @@ interface BashmeProps {
 
 export default class extends React.Component<BashmeProps, any> {
 
+	private bashme: Bashme;
+
+	constructor(props: any) {
+		super(props);
+
+		this.bashme = new Bashme();
+	}
+
 	public componentDidMount() {
 		this.props.providers.forEach(provider => {
-			Bashme.use(provider);
+			this.bashme.use(provider);
 		});
 
-		Bashme.show(document.getElementById('bashme')!);
+		this.bashme.show(document.getElementById('bashme')!);
 	}
 
 	public render() {
