@@ -1,12 +1,12 @@
 {
   "name": "react-bashme",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "author": "agurodriguez",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "bashme": "^0.2.0",
+    "bashme": "^0.2.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts-ts": "2.17.0"
