@@ -6,7 +6,8 @@ import { InfoProvider } from './providers';
 import 'bashme/dist/xterm.css';
 
 interface BashmeProps {
-	providers: Array<InfoProvider>
+	providers: Array<InfoProvider>,
+	onCommand: (cmd: string, args: object) => void 
 }
 
 export default class extends React.Component<BashmeProps, any> {
@@ -17,6 +18,7 @@ export default class extends React.Component<BashmeProps, any> {
 		super(props);
 
 		this.bashme = new Bashme();
+		this.registerBashmeListeners();
 	}
 
 	public componentDidMount() {
@@ -25,6 +27,12 @@ export default class extends React.Component<BashmeProps, any> {
 		});
 
 		this.bashme.show(document.getElementById('bashme')!);
+	}
+
+	private registerBashmeListeners() {
+		if (this.props.onCommand) {
+			this.bashme.on('command', this.props.onCommand);
+		}
 	}
 
 	public render() {
