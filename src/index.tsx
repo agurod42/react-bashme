@@ -7,7 +7,7 @@ import 'bashme/dist/xterm.css';
 
 interface BashmeProps {
 	providers: Array<InfoProvider>,
-	onCommand: (cmd: string, args: object) => void 
+	onInput: (cmd: string, args: object) => void 
 }
 
 export default class extends React.Component<BashmeProps, any> {
@@ -30,8 +30,8 @@ export default class extends React.Component<BashmeProps, any> {
 	}
 
 	private registerBashmeListeners() {
-		if (this.props.onCommand) {
-			this.bashme.on('command', this.props.onCommand);
+		if (this.props.onInput) {
+			this.bashme.on('input', this.props.onInput);
 		}
 	}
 
