@@ -1,11 +1,12 @@
-import Bashme from 'bashme';
+import Bashme, { BashmeOptions } from 'bashme';
 import * as React from 'react';
 
 import { InfoProvider } from './providers';
 
 import 'bashme/dist/xterm.css';
 
-interface BashmeProps {
+export interface BashmeProps {
+	options?: BashmeOptions,
 	providers: Array<InfoProvider>,
 	onInput: (cmd: string, args: object) => void 
 }
@@ -17,7 +18,7 @@ export default class extends React.Component<BashmeProps, any> {
 	constructor(props: any) {
 		super(props);
 
-		this.bashme = new Bashme();
+		this.bashme = new Bashme(this.props.options);
 		this.registerBashmeListeners();
 	}
 
