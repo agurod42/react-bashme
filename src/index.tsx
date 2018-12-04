@@ -1,13 +1,13 @@
-import Bashme, { BashmeOptions } from 'bashme';
+import { Bashme, BashmeOptions } from 'bashme';
 import * as React from 'react';
 
-import { InfoProvider } from './providers';
+import { IProvider } from './provider';
 
 import 'bashme/dist/xterm.css';
 
 export interface BashmeProps {
 	options?: BashmeOptions,
-	providers: Array<InfoProvider>,
+	providers: Array<IProvider>,
 	onInput: (cmd: string, args: object) => void 
 }
 
