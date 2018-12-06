@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "bashme": "^0.3.2",
+    "bashme": "^0.3.3",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts-ts": "2.17.0"
